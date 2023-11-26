@@ -11,6 +11,7 @@ const createBlob= ()=>{
     let a= document.createElement('a');
     a.href=url;
     a.download='greetings.txt';
+    
     // this download property starts browser to local disk download, 
     // as well as setting default name
 
