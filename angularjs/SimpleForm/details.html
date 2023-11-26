@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+<body ng-app="fApp">
+<div  ng-controller="fController">
+   
+ <form novalidate>
+    <p3> THIS is simple detail form</p3><br><br>
+
+    &nbsp&nbsp<label for="nm" >Name</label>    
+    &nbsp&nbsp<input type="text" id="nm"  ng-model="details.name"><br>
+    &nbsp&nbsp<label for="ag" >Age</label>
+    &nbsp&nbsp<input type="number" id="ag" ng-model="details.age"><br>
+    &nbsp&nbsp<label for="sz" >FlatSize</label>
+    &nbsp&nbsp<select ng-model="details.flatsize" id="sz">
+        <option value=""></option>
+        <option value="2BHK">2BHK</option>
+        <option value="3BHK">3BHK</option>
+        <option value="4BHK">4BHK</option>
+
+    </select><br>
+    &nbsp&nbsp<input type="radio" ng-model="details.apartment" value="Manjeera Diamond"> Manjeera Diamond Tower
+    <input type="radio" ng-model="details.apartment" value="Aparna Sarovar"> Aparna Sarovar Tower
+    <input type="radio" ng-model="details.apartment" value="Jyanthi Apartment"> Jyanthi Apartment
+    <br><br>
+
+    <input type=date>
+
+    &nbsp&nbsp&nbsp&nbsp<button type="submit" ng-click=""></button>
+    </form>
+   
+
+</div>
+ 
+ 
+
+
+</body>
+<script>
+    var formApp= angular.module('fApp',[]);
+    formApp.controller('fController',function($scope){
+        $scope.details = {name:"Ram",age:25,flatsize:"2BHK",apartment:""};
+        $scope.test="good";
+    })
+</script>
+
+</html>

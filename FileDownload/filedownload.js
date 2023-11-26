@@ -6,12 +6,13 @@ const createBlob= ()=>{
     const str= 'Hi goodmorning'
     let b = new Blob([str],{type:'plain/text'});
     console.log('blob ',b);
+
     let url = URL.createObjectURL(b);
     // creating anchor tag
-    let a= document.createElement('a');
+    let a= document.createElement('a'); // 
     a.href=url;
     a.download='greetings.txt';
-    
+
     // this download property starts browser to local disk download, 
     // as well as setting default name
 

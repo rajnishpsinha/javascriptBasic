@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="tApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body ng-controller="testController">
+<table>
+<tr> <th>Name</th><th>Age</th></tr>
+<tr ng-repeat="cust in customer">
+<td>{{cust.name}}</td>
+<td>{{cust.age}}</td>
+</tr>
+</table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script src="UI/modules/firstapp.js"></script>
+<script src="UI/controllers/tcontroller.js"></script>
+</body>
+</html>

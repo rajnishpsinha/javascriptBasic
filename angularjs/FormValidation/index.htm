@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="tApp">
+<head>
+    <meta chrset="UTF 8">
+    <title>Event Registration</title>
+</head>
+<body ng-controller="validationCtrl">
+
+
+<form name="myValidation"  novalidate >
+    <p3> THIS is validation test form</p3><br>
+ <div class="form-group row">
+<div class="col-xs-2">
+<label for="usr">Enter user id:</label>
+ <input type="text" id="usr" class="form-control" name="user" ng-model="defaultUsername"  required  >
+ <span style="color:red" ng-show="myValidation.user.$dirty && myValidation.user.$invalid">
+<span ng-show="myValidation.user.$dirty && myValidation.user.$error.required">Username is required</span></span>
+</div></div>
+<div class="form-group row">
+  <div class="col-xs-2">
+  <label for="pwd">Password: </label>
+  <input type="password" id="pwd" class="form-control" name="pass" required>
+  <span style="color:red" ng-show="myValidation.pass.$dirty && myValidation.pass.$invalid ">
+  <span ng-show="myValidation.pass.$dirty && myValidation.pass.$invalid">password is required</span>
+  </span>
+</div>
+</div>
+
+<div>
+<button type="submit" class="btn btn-default"
+  ng-disabled=" myValidation.user.$invalid">press</button>
+ 
+</div>
+</form>
+
+
+</body>
+<script src="https://code.angularjs.org/1.6.9/angular.min.js"></script>
+
+<script src="E:\JS\angularjs\FormValidation\formValidationModule.js"></script>
+<script src="E:\JS\angularjs\FormValidation\formValidationController.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</html>

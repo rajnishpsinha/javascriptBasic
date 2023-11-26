@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h3>testing</h3>
+        <br>
+        <input type="number" id="a1" ><br>
+        <input type="number" id="a2"><br><br> 
+        <input type="number" id="a3">
+        press button: <input type="button" onclick="fillInput1()" >
+        <script>
+          function add(x,y,callback){            
+              //let sum = x+y;
+              //callback(x+y);
+              console.log('test');
+              setTimeout(function(){
+                callback(x+y);
+              },3000);
+                
+           }
+
+            let callbk = function(result){
+             document.getElementById('a3').setAttribute("value", result);
+            }
+
+           add(3,4,callbk);
+
+        //function definition
+        
+
+        </script>
+
+    </body>
+</html>

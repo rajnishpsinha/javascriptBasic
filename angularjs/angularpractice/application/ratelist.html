@@ -1,0 +1,32 @@
+<html ng-app="tApp">
+    <body ng-init="nam='Ajay'" >
+<h3>This is the rate list</h3>
+ <div  ng-controller="vegcontroller">   
+<table>
+   <tr>
+    <th>vegetable</th>
+    <th>rate per kg</th>
+   </tr>
+    <tr ng-repeat="veg in vegetableList">
+        <td>{{veg.name}}</td>
+        <td>{{veg.rate}}</td>
+
+    </tr>
+</table>
+<div first-directive></div>
+</div>
+<div ng-hide="isHidden">
+DOM manipulations
+Name : <input type="text" ng-model="nam">{{nam}}<br>
+</div>
+Hide: <input type="checkbox" ng-model="isHidden">
+
+   
+
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="module/testModule.js"></script>
+        <script src="controllers/testController.js"></script> 
+        <script src="customdirectives/demodirective.js"></script> 
+    </body>
+</html>

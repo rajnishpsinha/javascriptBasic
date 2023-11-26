@@ -1,0 +1,39 @@
+<html>
+    <head></head>
+<body>
+    <div id="va"></div>
+   <script type="text/JavaScript" defer>
+let url="https://jsonplaceholder.typicode.com/users" ;
+let xhr = new XMLHttpRequest();
+xhr.open('GET',url,true);
+xhr.onreadystatechange=function(ev){
+    console.log(xhr.readyState);
+     if (xhr.readyState== 4)
+     {
+         console.log(xhr.status);
+          switch (xhr.status) {
+              case 200:
+              case 201:
+              console.log("created");
+              let div1=document.querySelector("#va");
+              div1.textContent= xhr.responseText ; 
+                  break;
+            
+             case 500:
+              console.log("server issue");
+              break;
+              default:
+              console.log("default option running");
+                  
+         }
+    }
+}
+xhr.onerror=function(err){
+    console.warn(err);
+}
+
+xhr.send(null);
+
+   </script> 
+</body>
+</html>

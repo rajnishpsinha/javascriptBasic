@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en" ng-app="tblApp">
+    <head>
+    <title>Smart meter</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Rajnish" content="AngularJS">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-smart-table/2.1.8/smart-table.min.js"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+        <script src="tblmodule.js"></script>
+        <script src="tblcontroller.js"></script>
+    
+  
+
+</head>
+    <body ng-controller="tblController">
+        
+        <div style="text-align:center;color:blue;font-size: 150%;">{{tableName}}</div>
+        <div class="container">
+        
+        <div ng-show="loading">loading ...</div>   
+        <table st-table="dispaly_records" st-safe-src="employees" class="table table-striped">  
+        <thread>
+            <tr>
+                <th>name</th>
+                <th>age</th>
+                <th>salary</th>
+            </tr>       
+
+        </thread>
+        <tbody>
+            <tr st-select-row="row" st-select-mode="multiple" ng-repeat="row in dispaly_records ">
+            <td>{{row.employee_name}}</td>
+            <td>{{row.employee_age}}</td>
+            <td>{{row.employee_salary}}</td>
+            </tr>
+        </tbody>  
+        </table>
+        
+    </div>
+
+   
+
+
+    </body>
+
+
+</html>

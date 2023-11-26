@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <script type="text/JavaScript">
+    function myDisplayer(some){
+        document.getElementById("demo").innerHTML=some;
+    }
+    function getFile(myCallback){
+    let request= new XMLHttpRequest();
+    request.open('GET',"photo.html");
+    request.onload=function(){
+        if(req.status==200){
+            myCallback(this.responseText);
+        }
+        else{
+            myCallback("Error: "+request.status)
+        }
+    }
+    request.send();
+    }
+    getFile(myDisplayer);
+        </script>
+        <div id="demo">Here comes picture!</div>
+    </body>
+</html>

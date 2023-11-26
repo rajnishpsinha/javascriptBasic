@@ -1,0 +1,63 @@
+
+Recent Tutorials and Articles
+Creating index in Elasticsearc...
+This article talks about how to create an index in Elasticsearch cluster.
+Changing ElasticSearch Index N...
+This article provides details on how to change ElasticSearch index names for Spring Boot A...
+Changing Spring Boot Metrics P...
+This article explains how to change publishing frequency of Spring Boot Actuator Metrics t...
+
+ 
+Related Tutorials and Articles
+User-defined Marker to Google ...
+This tutorial helps you implement user-defined (using form) markers to Google Maps using A...
+Charts and Events Using Angula...
+This tutorial helps you implement charts and click events using Angular-FusionCharts Plugi...
+Multiple Charts Using AngularJ...
+This tutorial helps you implement different type of charts using Angular-FusionCharts Plug...
+
+ 
+
+ 
+Implementing Google Maps in AngularJS
+Published on: 25th May 2018
+Posted By: Sumit Sain
+This tutorial demonstrates how to implement Google Maps using AngularJs.
+
+
+ 
+We will be creating following three files in order to demonstrate the implementation of Google Maps in AngularJs -
+
+google-maps.html file for creating a Google Map.
+maps.css file for adding basic style to our Google Map.
+maps.js file containing AngularJs controller for our Google Map.
+This is how our project structure looks like -
+
+
+
+google-maps.html
+Here is how our HTML file google-maps.html looks like -
+
+google-maps.html
+<!DOCTYPE html>
+<html ng-app="mapsApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/maps.css">
+<script
+  src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+<script
+  src="http://maps.googleapis.com/maps/api/js?sensor=false&language=en"></script>
+  <script type="text/javascript" src="js/maps.js"></script>
+</head>
+<body>
+<div ng-controller="MapCtrl">
+    <div id="map"></div>
+    <div id="repeat" ng-repeat="marker in markers | orderBy : 'title'">
+         <a id="country_container" href="#" ng-click="openInfoWindow($event, marker)">
+         <label id="names" >{{marker.title}}</label></a>
+    </div>
+</div>
+</body>
+</html>

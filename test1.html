@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body>
+        <h3> practicing querySelector() of element interface</h3>
+        <br>
+ <p></p>
+ 
+ <br>
+ <button onclick="showToday()">today</button>
+    </body>
+<script type="text/JavaScript">
+function  showToday() {
+    let element1=document.querySelector('p');
+     //new Date().toDateString()
+     //element1.textContent = new Date().toDateString();
+     
+     element1.innerHTML= new Date().toDateString();
+     console.log(element1);
+
+}
+
+</script>
+</html>
